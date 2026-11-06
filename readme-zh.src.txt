@@ -35,8 +35,16 @@ cs-source-reliable 是给 DeepSeek Harness 用的信源管家：内置 **119 个
 
 要求：DeepSeek Harness `>=0.2.1-rc.1 <0.3.0-0`，Node.js 20 及以上。
 
+推荐用发布包安装（无需构建）：
+
 ```sh
-dsh plugin --profile web add github:<owner>/cs-source-reliable
+dsh plugin --profile web add https://github.com/uhygyuf/cs-source-reliable/releases/latest/download/cs-source-reliable.tgz
+```
+
+从源码仓库安装：
+
+```sh
+dsh plugin --profile web add github:uhygyuf/cs-source-reliable
 ```
 
 装完重启或重载配置后，在「设置 → 插件」里可以看到 **CS 信源可靠性**。

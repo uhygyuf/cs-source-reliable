@@ -71,10 +71,16 @@ Token counts are character-based estimates at 4 chars/token; the two tool schema
 
 Requirements: DeepSeek Harness `>=0.2.1-rc.1 <0.3.0-0`, Node.js 20+.
 
-From a GitHub checkout:
+From the release tarball (recommended — no build step):
 
 ```sh
-dsh plugin --profile web add github:<owner>/cs-source-reliable
+dsh plugin --profile web add https://github.com/uhygyuf/cs-source-reliable/releases/latest/download/cs-source-reliable.tgz
+```
+
+From the source repository:
+
+```sh
+dsh plugin --profile web add github:uhygyuf/cs-source-reliable
 ```
 
 From a local directory during development:

@@ -1,5 +1,6 @@
 node_modules/
 *.tgz
 *.log
+release-notes.tmp.txt
 .DS_Store
 Thumbs.db
