@@ -1,0 +1,4 @@
+- insert:
+    - id: cs-source-reliable
+      name: 'cs-source-reliable'
+      config: {}

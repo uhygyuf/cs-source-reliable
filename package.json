@@ -1,0 +1,65 @@
+{
+  "name": "cs-source-reliable",
+  "version": "0.1.0",
+  "description": "Source reliability for CS teaching in DeepSeek Harness: a bundled registry of 119 verified, agent-collectable CS sources with authority/evidence tiers, plus cs_source_find and cs_source_audit tools. · 计算机信源可靠性插件：119 个实测可采集的计算机信源按权威与证据分级，提供信源查找与引用审计工具。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/registry.js",
+    "lib/guidance.js",
+    "lib/tool-defs.js",
+    "data/sources.json",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "assets/icon-180.png",
+    "assets/icon-512.png",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/check.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "sources",
+    "citations",
+    "cs-education",
+    "reliability"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uhygyuf/cs-source-reliable.git"
+  },
+  "homepage": "https://github.com/uhygyuf/cs-source-reliable#readme",
+  "bugs": {
+    "url": "https://github.com/uhygyuf/cs-source-reliable/issues"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1-rc.1 <5",
+    "@deepseek-ai/dsh-tools": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

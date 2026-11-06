@@ -1,0 +1,3258 @@
+{
+ "meta": {
+  "name": "CS source registry",
+  "data_version": 1,
+  "generated_at": "2026-11-06",
+  "source_matrix": "cs-source-matrix.yaml",
+  "count": 119,
+  "knowledge_areas": [
+   "AL",
+   "AR",
+   "CN",
+   "DM",
+   "DS",
+   "FPL",
+   "GV",
+   "HCI",
+   "IS",
+   "MSF",
+   "OS",
+   "PDC",
+   "SEC",
+   "SE",
+   "SEP",
+   "SF",
+   "SPD"
+  ],
+  "authority_legend": {
+   "A": "一手事实：规范正文/官方参考/源码/发布说明",
+   "B": "权威解释：官方教程/经典教材/同行评审论文",
+   "C": "可靠二手：社区维护 wiki/开放课程/百科",
+   "D": "线索：问答/博客/新闻（不可当结论）"
+  },
+  "evidence_legend": {
+   "spec": "标准/规范正文",
+   "official-doc": "官方文档",
+   "textbook": "教材",
+   "course": "课程",
+   "peer-reviewed": "同行评审论文/会议",
+   "preprint": "预印本（未审）",
+   "release-note": "发布说明/changelog",
+   "advisory": "安全公告/漏洞库",
+   "blog": "官方博客",
+   "community": "社区问答/百科",
+   "index": "索引/目录",
+   "standard-guide": "知识体系/指南（如 SWEBOK）"
+  },
+  "content_access_legend": {
+   "static": "静态 HTML，可直接取正文",
+   "portal": "落地页/目录页，需跟随链接到正文",
+   "js": "需要浏览器渲染（纯 fetch 拿不到正文）",
+   "redirect": "HTML meta 重定向，需跟随",
+   "frameset": "frameset/框架页，正文在子页",
+   "api": "JSON/Atom/XML 返回结构化数据",
+   "binary": "PDF/二进制，需下载后解析"
+  },
+  "license_class_legend": {
+   "cc-by-sa": "署名 + 相同方式共享（Wikipedia/MDN/StackExchange 等）",
+   "public-domain": "公有领域（如美国政府作品）",
+   "open-metadata": "元数据开放（如 OpenAlex/Crossref/DOAJ）",
+   "open-access-paper": "论文开放获取，单篇许可可能不同",
+   "varies": "逐条不同，需逐项核对",
+   "site-terms": "站点条款/版权保留，默认只链接 + 短引用",
+   "unknown": "未知，按最严格策略处理"
+  },
+  "cache_policy_legend": {
+   "metadata-only": "只存元数据与链接，不缓存正文",
+   "short-quote": "可存短引用并必须署名/链接",
+   "full-text-allowed": "可缓存全文（仍需核对具体许可）"
+  },
+  "license_note": "license_class 是策略分桶，不是法律意见；绑定许可以源站条款为准。"
+ },
+ "sources": [
+  {
+   "id": "ostep",
+   "name": "Operating Systems: Three Easy Pieces",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "operating systems",
+    "virtual memory",
+    "scheduling",
+    "concurrency",
+    "file systems",
+    "textbook"
+   ],
+   "ka": [
+    "OS"
+   ],
+   "notes": "免费在线教材；OS 教学主源"
+  },
+  {
+   "id": "xv6-book",
+   "name": "xv6: a simple, Unix-like teaching OS (book)",
+   "url": "https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "pdf",
+   "content_access": "binary",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "operating systems",
+    "kernel",
+    "risc-v",
+    "teaching os",
+    "system calls"
+   ],
+   "ka": [
+    "OS"
+   ],
+   "notes": "与 xv6 源码配套；适合 OS 实验课"
+  },
+  {
+   "id": "dive-into-systems",
+   "name": "Dive into Systems",
+   "url": "https://diveintosystems.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer systems",
+    "assembly",
+    "c",
+    "memory hierarchy",
+    "architecture"
+   ],
+   "ka": [
+    "AR",
+    "OS",
+    "SF"
+   ],
+   "notes": "C/汇编/体系结构/OS 入门，免费在线"
+  },
+  {
+   "id": "sicp",
+   "name": "Structure and Interpretation of Computer Programs",
+   "url": "https://sarabander.github.io/sicp/html/index.xhtml",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "programming",
+    "scheme",
+    "abstraction",
+    "functional programming",
+    "textbook"
+   ],
+   "ka": [
+    "SF",
+    "FPL"
+   ],
+   "notes": "经典教材 HTML 版；Scheme。根路径是目录页，正文在 html/ 下逐章抓取"
+  },
+  {
+   "id": "htdp",
+   "name": "How to Design Programs",
+   "url": "https://htdp.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "portal",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "programming",
+    "racket",
+    "functional programming",
+    "design recipe"
+   ],
+   "ka": [
+    "SF",
+    "FPL"
+   ],
+   "notes": "系统化程序设计入门"
+  },
+  {
+   "id": "plai",
+   "name": "Programming Languages: Application and Interpretation",
+   "url": "https://www.plai.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "programming languages",
+    "interpreters",
+    "semantics",
+    "scheme"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "PL 教学经典，免费"
+  },
+  {
+   "id": "crafting-interpreters",
+   "name": "Crafting Interpreters",
+   "url": "https://craftinginterpreters.com/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "compilers",
+    "interpreters",
+    "parsing",
+    "bytecode",
+    "programming languages"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "手写解释器/编译器入门"
+  },
+  {
+   "id": "erickson-algorithms",
+   "name": "Algorithms (Jeff Erickson)",
+   "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "algorithms",
+    "complexity",
+    "dynamic programming",
+    "graphs",
+    "textbook"
+   ],
+   "ka": [
+    "AL"
+   ],
+   "notes": "免费算法教材，含习题"
+  },
+  {
+   "id": "open-data-structures",
+   "name": "Open Data Structures",
+   "url": "https://opendatastructures.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "data structures",
+    "algorithms",
+    "trees",
+    "hashing",
+    "textbook"
+   ],
+   "ka": [
+    "AL"
+   ],
+   "notes": "数据结构教材，免费"
+  },
+  {
+   "id": "mit-6042",
+   "name": "MIT 6.042J Mathematics for Computer Science",
+   "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "course",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "discrete mathematics",
+    "probability",
+    "proofs",
+    "combinatorics"
+   ],
+   "ka": [
+    "DS",
+    "MSF"
+   ],
+   "notes": "离散数学/概率基础，讲义与视频"
+  },
+  {
+   "id": "mit-ocw",
+   "name": "MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "course",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "courses",
+    "curriculum",
+    "lectures",
+    "computer science"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "全学科课程索引；按课程页抓取"
+  },
+  {
+   "id": "cnds",
+   "name": "Computer Networks: A Systems Approach",
+   "url": "https://book.systemsapproach.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer networks",
+    "tcp/ip",
+    "routing",
+    "congestion control",
+    "textbook"
+   ],
+   "ka": [
+    "CN"
+   ],
+   "notes": "免费网络教材，配套实验"
+  },
+  {
+   "id": "vansteen-ds",
+   "name": "Distributed Systems (van Steen & Tanenbaum)",
+   "url": "https://www.distributed-systems.net/index.php/books/ds3/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "distributed systems",
+    "consistency",
+    "replication",
+    "fault tolerance"
+   ],
+   "ka": [
+    "PDC"
+   ],
+   "notes": "分布式系统教材，免费在线"
+  },
+  {
+   "id": "d2l",
+   "name": "Dive into Deep Learning",
+   "url": "https://d2l.ai/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "deep learning",
+    "neural networks",
+    "machine learning",
+    "pytorch"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "可运行代码的深度学习教材"
+  },
+  {
+   "id": "sutton-barto",
+   "name": "Reinforcement Learning: An Introduction",
+   "url": "http://incompleteideas.net/book/the-book-2nd.html",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "portal",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "reinforcement learning",
+    "markov decision process",
+    "td learning",
+    "textbook"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "RL 标准教材，免费 PDF；该站 HTTPS 实测失败，保留 http"
+  },
+  {
+   "id": "goodfellow-dl",
+   "name": "Deep Learning (Goodfellow et al.)",
+   "url": "https://www.deeplearningbook.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "deep learning",
+    "neural networks",
+    "representation learning",
+    "textbook"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "深度学习经典教材，在线免费"
+  },
+  {
+   "id": "slp3",
+   "name": "Speech and Language Processing (Jurafsky & Martin)",
+   "url": "https://web.stanford.edu/~jurafsky/slp3/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "natural language processing",
+    "speech",
+    "transformers",
+    "text classification"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "NLP 教材，章节 PDF 免费"
+  },
+  {
+   "id": "szeliski-cv",
+   "name": "Computer Vision: Algorithms and Applications (Szeliski)",
+   "url": "https://szeliski.org/Book/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer vision",
+    "image processing",
+    "stereo",
+    "segmentation"
+   ],
+   "ka": [
+    "IS",
+    "GV"
+   ],
+   "notes": "CV 教材，免费 PDF 草稿"
+  },
+  {
+   "id": "poole-aima",
+   "name": "Artificial Intelligence: Foundations of Computational Agents",
+   "url": "https://artint.info/2e/html/ArtInt2e.html",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "portal",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "artificial intelligence",
+    "agents",
+    "search",
+    "reasoning"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "AI 教材，免费在线"
+  },
+  {
+   "id": "anderson-sec",
+   "name": "Security Engineering (Ross Anderson)",
+   "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "security engineering",
+    "threat models",
+    "cryptography",
+    "access control"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "安全工程教材，章节免费在线"
+  },
+  {
+   "id": "pbrt",
+   "name": "Physically Based Rendering (PBRT)",
+   "url": "https://pbr-book.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer graphics",
+    "rendering",
+    "ray tracing",
+    "physically based"
+   ],
+   "ka": [
+    "GV"
+   ],
+   "notes": "离线渲染教材，全文在线"
+  },
+  {
+   "id": "hci-encyclopedia",
+   "name": "The Encyclopedia of Human-Computer Interaction",
+   "url": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "human-computer interaction",
+    "usability",
+    "ux",
+    "design"
+   ],
+   "ka": [
+    "HCI"
+   ],
+   "notes": "免费 HCI 参考书；编辑组织，非学会出版"
+  },
+  {
+   "id": "libretexts-cs",
+   "name": "LibreTexts Computer Science",
+   "url": "https://eng.libretexts.org/Bookshelves/Computer_Science",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "varies",
+   "cache_policy": "metadata-only",
+   "attribution": "required",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "open textbooks",
+    "computer science",
+    "courses"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "开放教材聚合；质量随书目不同"
+  },
+  {
+   "id": "think-python",
+   "name": "Think Python",
+   "url": "https://greenteapress.com/wp/think-python-2e/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "python",
+    "programming",
+    "textbook",
+    "beginners"
+   ],
+   "ka": [
+    "FPL",
+    "SF"
+   ],
+   "notes": "Python 入门教材，免费"
+  },
+  {
+   "id": "beej-c",
+   "name": "Beej's Guide to C Programming",
+   "url": "https://beej.us/guide/bgc/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "c programming",
+    "pointers",
+    "sockets",
+    "systems programming"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "C 语言实用教材，免费"
+  },
+  {
+   "id": "eloquent-js",
+   "name": "Eloquent JavaScript",
+   "url": "https://eloquentjavascript.net/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "javascript",
+    "programming",
+    "web",
+    "textbook"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "JS 教材，免费在线"
+  },
+  {
+   "id": "rust-book",
+   "name": "The Rust Programming Language",
+   "url": "https://doc.rust-lang.org/book/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "rust",
+    "programming",
+    "ownership",
+    "borrowing",
+    "official book"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "官方书；与版本绑定"
+  },
+  {
+   "id": "nand2tetris",
+   "name": "Nand2Tetris",
+   "url": "https://www.nand2tetris.org/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "course",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer architecture",
+    "digital logic",
+    "assembler",
+    "compiler",
+    "course"
+   ],
+   "ka": [
+    "AR",
+    "SF"
+   ],
+   "notes": "从门电路到 VM/编译器的课程"
+  },
+  {
+   "id": "swebok",
+   "name": "SWEBOK (Software Engineering Body of Knowledge)",
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "standard-guide",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "software engineering",
+    "requirements",
+    "testing",
+    "maintenance",
+    "body of knowledge"
+   ],
+   "ka": [
+    "SE"
+   ],
+   "notes": "IEEE Computer Society 知识体系；SE 广度主源"
+  },
+  {
+   "id": "redbook",
+   "name": "Readings in Database Systems (Red Book)",
+   "url": "http://www.redbook.io/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "textbook",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 365,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "database systems",
+    "transactions",
+    "isolation",
+    "storage",
+    "query processing"
+   ],
+   "ka": [
+    "DM"
+   ],
+   "notes": "数据库经典论文导读，免费；该站 HTTPS 实测失败，保留 http"
+  },
+  {
+   "id": "missing-semester",
+   "name": "MIT Missing Semester",
+   "url": "https://missing.csail.mit.edu/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "course",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "shell",
+    "git",
+    "debugging",
+    "command line",
+    "tools"
+   ],
+   "ka": [
+    "SE",
+    "SF"
+   ],
+   "notes": "命令行/Git/调试等工程基础"
+  },
+  {
+   "id": "cs50",
+   "name": "CS50x",
+   "url": "https://cs50.harvard.edu/x/",
+   "layer": "breadth",
+   "authority": "B",
+   "evidence": "course",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer science",
+    "programming",
+    "algorithms",
+    "course"
+   ],
+   "ka": [
+    "SF"
+   ],
+   "notes": "入门课程，含作业与讲解"
+  },
+  {
+   "id": "python-docs",
+   "name": "Python Documentation",
+   "url": "https://docs.python.org/3/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "python",
+    "documentation",
+    "standard library",
+    "official"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "带版本选择器；注意抓对应版本"
+  },
+  {
+   "id": "node-docs",
+   "name": "Node.js API Documentation",
+   "url": "https://nodejs.org/api/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "node.js",
+    "javascript",
+    "api",
+    "runtime",
+    "official"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "版本线多；LTS 与 current 要区分"
+  },
+  {
+   "id": "go-docs",
+   "name": "Go Documentation",
+   "url": "https://go.dev/doc/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "go",
+    "golang",
+    "documentation",
+    "standard library"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "含 spec、tour、blog"
+  },
+  {
+   "id": "rust-std",
+   "name": "Rust Standard Library",
+   "url": "https://doc.rust-lang.org/std/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "rust",
+    "standard library",
+    "api",
+    "documentation"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "可按 stable/beta/nightly 版本"
+  },
+  {
+   "id": "java-docs",
+   "name": "Java SE Documentation",
+   "url": "https://docs.oracle.com/en/java/javase/21/docs/api/index.html",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "java",
+    "jdk",
+    "api",
+    "documentation"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "原 /21/ 落地页需 JS；改用 API 文档静态页；按 JDK 版本替换 21"
+  },
+  {
+   "id": "mslearn",
+   "name": "Microsoft Learn (.NET)",
+   "url": "https://learn.microsoft.com/en-us/dotnet/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "dotnet",
+    "c#",
+    "api",
+    "documentation",
+    "microsoft"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "含版本/框架区分"
+  },
+  {
+   "id": "k8s-docs",
+   "name": "Kubernetes Documentation",
+   "url": "https://kubernetes.io/docs/home/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "kubernetes",
+    "containers",
+    "orchestration",
+    "cluster",
+    "documentation"
+   ],
+   "ka": [
+    "PDC",
+    "SPD"
+   ],
+   "notes": "按版本文档目录"
+  },
+  {
+   "id": "postgres-docs",
+   "name": "PostgreSQL Documentation",
+   "url": "https://www.postgresql.org/docs/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "postgresql",
+    "sql",
+    "database",
+    "transactions",
+    "mvcc"
+   ],
+   "ka": [
+    "DM"
+   ],
+   "notes": "按版本；含 SQL 语法/系统表"
+  },
+  {
+   "id": "pytorch-docs",
+   "name": "PyTorch Documentation",
+   "url": "https://pytorch.org/docs/2.15/index.html",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "pytorch",
+    "deep learning",
+    "tensors",
+    "gpu",
+    "api"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "stable/index.html 是 HTML meta 重定向（1456B），直接抓会拿到跳转页；改用版本化 URL，随版本更新 2.15"
+  },
+  {
+   "id": "tensorflow-docs",
+   "name": "TensorFlow API Docs",
+   "url": "https://www.tensorflow.org/api_docs",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "tensorflow",
+    "machine learning",
+    "keras",
+    "api"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "版本选择器"
+  },
+  {
+   "id": "chrome-dev",
+   "name": "Chrome for Developers",
+   "url": "https://developer.chrome.com/docs/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "chrome",
+    "web platform",
+    "browser",
+    "web apis"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "Web 平台实现侧文档"
+  },
+  {
+   "id": "web-dev",
+   "name": "web.dev",
+   "url": "https://web.dev/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "web performance",
+    "accessibility",
+    "best practices",
+    "baseline"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "web 平台指南/Baseline"
+  },
+  {
+   "id": "whatwg-html",
+   "name": "WHATWG HTML Standard",
+   "url": "https://html.spec.whatwg.org/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "html",
+    "standard",
+    "dom",
+    "web platform"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "HTML 活标准正文"
+  },
+  {
+   "id": "cuda-docs",
+   "name": "CUDA Toolkit Documentation",
+   "url": "https://docs.nvidia.com/cuda/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "cuda",
+    "gpu",
+    "parallel computing",
+    "nvidia"
+   ],
+   "ka": [
+    "PDC",
+    "SPD"
+   ],
+   "notes": "GPU 编程官方文档"
+  },
+  {
+   "id": "android-docs",
+   "name": "Android Developers Documentation",
+   "url": "https://developer.android.com/docs",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "android",
+    "mobile",
+    "app development",
+    "documentation"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "Android 平台文档"
+  },
+  {
+   "id": "apple-docs",
+   "name": "Apple Developer Documentation",
+   "url": "https://developer.apple.com/tutorials/data/documentation/swift.json",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "apple",
+    "ios",
+    "swift",
+    "macos",
+    "documentation"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "HTML 站需要 JS；文档内容有 JSON 接口 /tutorials/data/documentation/{symbol}.json，实测 swift.json 返回 19KB JSON"
+  },
+  {
+   "id": "mdn",
+   "name": "MDN Web Docs",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "cc-by-sa",
+   "cache_policy": "short-quote",
+   "attribution": "required",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "mdn",
+    "web docs",
+    "javascript",
+    "css",
+    "html",
+    "browser compatibility"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "Web 平台事实参考；兼容数据见 mdn-bcd"
+  },
+  {
+   "id": "cppreference",
+   "name": "cppreference",
+   "url": "https://en.cppreference.com/w/cpp/language",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "official-doc",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 30,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "c++",
+    "c",
+    "reference",
+    "standard library",
+    "language"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "社区维护的 C/C++ 参考；需对照标准版本"
+  },
+  {
+   "id": "ecma262",
+   "name": "ECMAScript Language Specification",
+   "url": "https://tc39.es/ecma262/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "ecmascript",
+    "javascript",
+    "language specification",
+    "standard"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "活标准；与 TC39 提案联动"
+  },
+  {
+   "id": "cpp-draft",
+   "name": "C++ Working Draft",
+   "url": "https://eel.is/c++draft/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "c++",
+    "standard",
+    "draft",
+    "iso"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "ISO C++ 公开草案"
+  },
+  {
+   "id": "iso-c-draft",
+   "name": "ISO C Working Draft (N3220)",
+   "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "pdf",
+   "content_access": "binary",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "c",
+    "standard",
+    "draft",
+    "iso"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "C 标准公开草案"
+  },
+  {
+   "id": "posix",
+   "name": "POSIX.1-2024 (Open Group)",
+   "url": "https://pubs.opengroup.org/onlinepubs/9799919799/idx/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "portal",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "posix",
+    "unix",
+    "system interfaces",
+    "standard"
+   ],
+   "ka": [
+    "OS"
+   ],
+   "notes": "根路径是 frameset（685B）；改用索引页，正文在 idx/ 下的静态子页"
+  },
+  {
+   "id": "unicode",
+   "name": "Unicode Standard",
+   "url": "https://www.unicode.org/versions/latest/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "unicode",
+    "character encoding",
+    "utf-8",
+    "standard"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "Unicode 标准"
+  },
+  {
+   "id": "intel-sdm",
+   "name": "Intel Software Developer's Manual",
+   "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "x86",
+    "intel",
+    "architecture",
+    "instruction set",
+    "manual"
+   ],
+   "ka": [
+    "AR"
+   ],
+   "notes": "x86 体系结构权威手册"
+  },
+  {
+   "id": "arm-arm",
+   "name": "Arm Architecture Reference Manual",
+   "url": "https://developer.arm.com/documentation/ddi0487/latest/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "js",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "arm",
+    "architecture",
+    "aarch64",
+    "reference manual"
+   ],
+   "ka": [
+    "AR"
+   ],
+   "notes": "Arm 体系结构手册；实测文本几乎为空（JS 渲染），需浏览器或直链 PDF"
+  },
+  {
+   "id": "riscv-spec",
+   "name": "RISC-V Specifications",
+   "url": "https://riscv.org/technical/specifications/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "risc-v",
+    "instruction set",
+    "architecture",
+    "specification"
+   ],
+   "ka": [
+    "AR"
+   ],
+   "notes": "RISC-V 开放规范"
+  },
+  {
+   "id": "khronos-registry",
+   "name": "Khronos Registry (OpenGL/Vulkan/OpenCL)",
+   "url": "https://registry.khronos.org/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "opengl",
+    "vulkan",
+    "opencl",
+    "graphics api",
+    "specification"
+   ],
+   "ka": [
+    "GV",
+    "SPD"
+   ],
+   "notes": "图形/计算 API 规范"
+  },
+  {
+   "id": "rfc",
+   "name": "RFC Editor",
+   "url": "https://www.rfc-editor.org/rfc/rfc9110.txt",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "rfc",
+    "internet standard",
+    "protocols",
+    "http"
+   ],
+   "ka": [
+    "CN"
+   ],
+   "notes": "单篇 RFC 纯文本；索引见 rfc-index"
+  },
+  {
+   "id": "rfc-index",
+   "name": "RFC Index (XML)",
+   "url": "https://www.rfc-editor.org/rfc-index.xml",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "xml",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "rfc",
+    "index",
+    "internet standards"
+   ],
+   "ka": [
+    "CN"
+   ],
+   "notes": "13.7MB；建议一次性下载离线建索引"
+  },
+  {
+   "id": "ietf-datatracker",
+   "name": "IETF Datatracker API",
+   "url": "https://datatracker.ietf.org/api/v1/doc/document/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "ietf",
+    "internet drafts",
+    "standards process"
+   ],
+   "ka": [
+    "CN"
+   ],
+   "notes": "RFC 与 draft 的状态/进度"
+  },
+  {
+   "id": "w3c-tr",
+   "name": "W3C Standards and Drafts",
+   "url": "https://www.w3.org/TR/",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "w3c",
+    "web standards",
+    "recommendations",
+    "specifications"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "TR 列表页；规范正文按条目抓"
+  },
+  {
+   "id": "w3c-api",
+   "name": "W3C API",
+   "url": "https://api.w3.org/specifications?format=json",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "w3c",
+    "specifications",
+    "api"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "规范目录 JSON（HAL）"
+  },
+  {
+   "id": "nist-800-53",
+   "name": "NIST SP 800-53",
+   "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final",
+   "layer": "breadth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "security controls",
+    "nist",
+    "compliance",
+    "risk management"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "安全控制基线；NIST SP 800 系列均可抓"
+  },
+  {
+   "id": "tc39-proposals",
+   "name": "TC39 Proposals",
+   "url": "https://raw.githubusercontent.com/tc39/proposals/main/README.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "tc39",
+    "javascript proposals",
+    "ecmascript",
+    "stages"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "提案 stage 状态；最新语言特性入口"
+  },
+  {
+   "id": "peps",
+   "name": "Python PEPs",
+   "url": "https://peps.python.org/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "python enhancement proposals",
+    "pep",
+    "language design"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "Python 语言提案与设计文档"
+  },
+  {
+   "id": "jeps",
+   "name": "OpenJDK JEPs",
+   "url": "https://openjdk.org/jeps/0",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "java enhancement proposals",
+    "jep",
+    "jdk features"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "Java 特性提案"
+  },
+  {
+   "id": "rust-rfcs",
+   "name": "Rust RFCs",
+   "url": "https://raw.githubusercontent.com/rust-lang/rfcs/master/README.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "spec",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 180,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "rust rfcs",
+    "language changes",
+    "proposals"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "Rust 语言变更提案"
+  },
+  {
+   "id": "teachyourselfcs",
+   "name": "Teach Yourself Computer Science",
+   "url": "https://teachyourselfcs.com/",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "self study",
+    "curriculum",
+    "computer science roadmap"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE"
+   ],
+   "notes": "自学者课程地图；用于覆盖检查"
+  },
+  {
+   "id": "ossu",
+   "name": "OSSU Computer Science Curriculum",
+   "url": "https://raw.githubusercontent.com/ossu/computer-science/master/README.md",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "open source society university",
+    "curriculum",
+    "computer science"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "开源计算机课程表；覆盖检查用"
+  },
+  {
+   "id": "wikipedia-rest",
+   "name": "Wikipedia REST API",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Python_(programming_language)",
+   "layer": "breadth",
+   "authority": "C",
+   "evidence": "community",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "cc-by-sa",
+   "cache_policy": "short-quote",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "wikipedia",
+    "encyclopedia",
+    "overview"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "只作入口/概念地图；必须追引用原文"
+  },
+  {
+   "id": "arxiv-api",
+   "name": "arXiv API",
+   "url": "https://export.arxiv.org/api/query?search_query=all:computer&max_results=1",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "preprint",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "varies",
+   "cache_policy": "metadata-only",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "arxiv",
+    "preprints",
+    "papers",
+    "api"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SF",
+    "SPD"
+   ],
+   "notes": "cs.* 全覆盖；无参数会返回 400；官方要求约 3 秒/请求；预印本，未审"
+  },
+  {
+   "id": "arxiv-rss",
+   "name": "arXiv RSS (cs.LG example)",
+   "url": "https://rss.arxiv.org/rss/cs.LG",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "preprint",
+   "kind": "rss",
+   "content_access": "api",
+   "license_class": "varies",
+   "cache_policy": "metadata-only",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "arxiv",
+    "rss",
+    "preprints",
+    "machine learning"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "按分类订阅；换 cs.AI/cs.CL/cs.CV 等"
+  },
+  {
+   "id": "openalex",
+   "name": "OpenAlex API",
+   "url": "https://api.openalex.org/works?search=computer%20science",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "open-metadata",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "openalex",
+    "scholarly metadata",
+    "papers",
+    "citations"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "论文元数据 + 开放获取链接；无 key 时共享每日预算"
+  },
+  {
+   "id": "crossref",
+   "name": "Crossref API",
+   "url": "https://api.crossref.org/works?query=computer%20science",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "open-metadata",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "crossref",
+    "doi",
+    "metadata",
+    "citations"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "DOI 元数据；免费"
+  },
+  {
+   "id": "semantic-scholar",
+   "name": "Semantic Scholar Graph API",
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "semantic scholar",
+    "papers",
+    "citations",
+    "api"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SF",
+    "SPD"
+   ],
+   "notes": "实测 429；免费层不稳定，建议申请 key"
+  },
+  {
+   "id": "pmlr",
+   "name": "PMLR (ICML/NeurIPS/AISTATS 等)",
+   "url": "https://proceedings.mlr.press/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "machine learning proceedings",
+    "icml",
+    "neurips",
+    "papers"
+   ],
+   "ka": [
+    "IS",
+    "MSF"
+   ],
+   "notes": "机器学习会议论文集，开放获取"
+  },
+  {
+   "id": "acl-anthology",
+   "name": "ACL Anthology",
+   "url": "https://aclanthology.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "acl",
+    "nlp",
+    "computational linguistics",
+    "papers"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "ACL/EMNLP/NAACL 论文集，开放"
+  },
+  {
+   "id": "cvf-openaccess",
+   "name": "CVF Open Access (CVPR/ICCV/WACV)",
+   "url": "https://openaccess.thecvf.com/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer vision",
+    "cvpr",
+    "iccv",
+    "papers"
+   ],
+   "ka": [
+    "IS",
+    "GV"
+   ],
+   "notes": "计算机视觉会议论文，开放 PDF"
+  },
+  {
+   "id": "jmlr",
+   "name": "Journal of Machine Learning Research",
+   "url": "https://jmlr.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "machine learning research",
+    "journal",
+    "papers"
+   ],
+   "ka": [
+    "IS",
+    "MSF"
+   ],
+   "notes": "开放获取期刊"
+  },
+  {
+   "id": "usenix",
+   "name": "USENIX Proceedings",
+   "url": "https://www.usenix.org/publications/proceedings",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "usenix",
+    "systems",
+    "security",
+    "osdi",
+    "papers"
+   ],
+   "ka": [
+    "OS",
+    "PDC",
+    "SEC"
+   ],
+   "notes": "OSDI/ATC/NSDI/Security 等，全文开放"
+  },
+  {
+   "id": "pvldb",
+   "name": "PVLDB",
+   "url": "https://www.vldb.org/pvldb/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "vldb",
+    "databases",
+    "papers"
+   ],
+   "ka": [
+    "DM"
+   ],
+   "notes": "数据库顶会论文，开放"
+  },
+  {
+   "id": "ndss",
+   "name": "NDSS Symposium",
+   "url": "https://www.ndss-symposium.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "network security",
+    "ndss",
+    "papers"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "网络安全会议，论文开放"
+  },
+  {
+   "id": "pets",
+   "name": "Privacy Enhancing Technologies Symposium (PoPETs)",
+   "url": "https://petsymposium.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "privacy enhancing technologies",
+    "pets",
+    "papers"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "隐私方向开放期刊"
+  },
+  {
+   "id": "jcgt",
+   "name": "Journal of Computer Graphics Techniques",
+   "url": "https://jcgt.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "portal",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computer graphics",
+    "rendering",
+    "journal",
+    "papers"
+   ],
+   "ka": [
+    "GV"
+   ],
+   "notes": "图形学开放期刊，补 SIGGRAPH 缺口；首页是 JS 目录，/published/ 实测 404，论文页需从首页链接解析"
+  },
+  {
+   "id": "lipics",
+   "name": "LIPIcs / Dagstuhl (ICALP, ESA, STACS, ECOOP, ESOP 等)",
+   "url": "https://drops.dagstuhl.de/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "lipics",
+    "dagstuhl",
+    "theoretical computer science",
+    "proceedings"
+   ],
+   "ka": [
+    "AL",
+    "FPL",
+    "PDC",
+    "MSF"
+   ],
+   "notes": "开放获取论文集，补理论/PL 缺口"
+  },
+  {
+   "id": "eccc",
+   "name": "ECCC (Electronic Colloquium on Computational Complexity)",
+   "url": "https://eccc.weizmann.ac.il/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "computational complexity",
+    "eccc",
+    "preprints"
+   ],
+   "ka": [
+    "AL",
+    "MSF"
+   ],
+   "notes": "理论计算机科学预印本/报告"
+  },
+  {
+   "id": "rss",
+   "name": "Robotics: Science and Systems Proceedings",
+   "url": "https://www.roboticsproceedings.org/",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "robotics",
+    "rss",
+    "papers"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "机器人方向开放会议论文"
+  },
+  {
+   "id": "hf-papers",
+   "name": "Hugging Face Daily Papers API",
+   "url": "https://huggingface.co/api/daily_papers",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "preprint",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "varies",
+   "cache_policy": "metadata-only",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "hugging face papers",
+    "machine learning",
+    "daily papers"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "293KB；社区策展，非同行评审"
+  },
+  {
+   "id": "hf-models",
+   "name": "Hugging Face Models API",
+   "url": "https://huggingface.co/api/models",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "hugging face",
+    "models",
+    "datasets"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "模型/数据集元数据"
+  },
+  {
+   "id": "hotchips",
+   "name": "Hot Chips",
+   "url": "https://hotchips.org/",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "hot chips",
+    "processors",
+    "hardware",
+    "conference"
+   ],
+   "ka": [
+    "AR"
+   ],
+   "notes": "芯片架构演讲；非论文"
+  },
+  {
+   "id": "jepsen",
+   "name": "Jepsen Analyses",
+   "url": "https://jepsen.io/analyses",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "peer-reviewed",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "open-access-paper",
+   "cache_policy": "short-quote",
+   "attribution": "recommended",
+   "refresh_days": 90,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "jepsen",
+    "distributed systems",
+    "consistency",
+    "testing"
+   ],
+   "ka": [
+    "DM",
+    "PDC"
+   ],
+   "notes": "分布式数据库一致性独立测试报告"
+  },
+  {
+   "id": "doaj",
+   "name": "DOAJ API",
+   "url": "https://doaj.org/api/search/journals/computer+science",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "open-metadata",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "open access journals",
+    "directory"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SEP",
+    "SF",
+    "SPD"
+   ],
+   "notes": "开放获取期刊目录"
+  },
+  {
+   "id": "zenodo",
+   "name": "Zenodo API",
+   "url": "https://zenodo.org/api/records",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "index",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "varies",
+   "cache_policy": "metadata-only",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "zenodo",
+    "artifacts",
+    "datasets",
+    "papers"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SF",
+    "SPD"
+   ],
+   "notes": "论文/数据集/artifact 存档"
+  },
+  {
+   "id": "nvd",
+   "name": "NVD (National Vulnerability Database)",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "advisory",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "public-domain",
+   "cache_policy": "full-text-allowed",
+   "attribution": "none",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "vulnerability database",
+    "cve",
+    "cvss",
+    "security"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "未认证 5 次/30 秒；CVE + CVSS"
+  },
+  {
+   "id": "osv",
+   "name": "OSV API",
+   "url": "https://api.osv.dev/v1/query",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "advisory",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "osv",
+    "open source vulnerabilities",
+    "advisories"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "开源包漏洞；POST 查询"
+  },
+  {
+   "id": "cve-services",
+   "name": "CVE Services API",
+   "url": "https://cveawg.mitre.org/api/cve/CVE-2021-44228",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "advisory",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "cve",
+    "vulnerability",
+    "mitre"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "原始 CVE 记录"
+  },
+  {
+   "id": "gh-advisories",
+   "name": "GitHub Security Advisories",
+   "url": "https://api.github.com/advisories",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "advisory",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "github security advisories",
+    "vulnerabilities"
+   ],
+   "ka": [
+    "SEC"
+   ],
+   "notes": "GHSA 公告；未认证可访问但有限流"
+  },
+  {
+   "id": "github-api",
+   "name": "GitHub REST API",
+   "url": "https://api.github.com/repos/python/cpython/releases",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "github",
+    "repositories",
+    "releases",
+    "api"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "DS",
+    "FPL",
+    "GV",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE",
+    "SF",
+    "SPD"
+   ],
+   "notes": "未认证 60 次/时，带 token 5000 次/时；取 releases/tags/changelog"
+  },
+  {
+   "id": "registries",
+   "name": "Package Registries",
+   "url": "https://registry.npmjs.org/express/latest",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "npm",
+    "pypi",
+    "crates",
+    "package registry",
+    "versions"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "版本/发布时间/依赖元数据；部分响应较大"
+  },
+  {
+   "id": "kernel-releases",
+   "name": "Linux Kernel Releases",
+   "url": "https://www.kernel.org/releases.json",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "linux kernel",
+    "releases",
+    "versions"
+   ],
+   "ka": [
+    "OS"
+   ],
+   "notes": "当前版本/维护线"
+  },
+  {
+   "id": "lwn-rss",
+   "name": "LWN Headlines RSS",
+   "url": "https://lwn.net/headlines/rss",
+   "layer": "depth",
+   "authority": "C",
+   "evidence": "blog",
+   "kind": "rss",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "lwn",
+    "linux kernel",
+    "news"
+   ],
+   "ka": [
+    "OS",
+    "PDC"
+   ],
+   "notes": "标题免费；新文章正文可能订阅可见"
+  },
+  {
+   "id": "v8-blog",
+   "name": "V8 Blog",
+   "url": "https://v8.dev/blog",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "v8",
+    "javascript engine",
+    "performance"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "JS 引擎实现细节/新特性"
+  },
+  {
+   "id": "llvm-blog",
+   "name": "LLVM Project Blog",
+   "url": "https://blog.llvm.org/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "llvm",
+    "compiler",
+    "clang",
+    "code generation"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "编译器基础设施"
+  },
+  {
+   "id": "go-blog",
+   "name": "The Go Blog (Atom)",
+   "url": "https://go.dev/blog/feed.atom",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "atom",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "go blog",
+    "golang",
+    "releases"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "Go 语言/工具链更新"
+  },
+  {
+   "id": "python-blog",
+   "name": "Python Insider RSS",
+   "url": "https://blog.python.org/feeds/posts/default",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "rss",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "python insider",
+    "cpython",
+    "releases"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "CPython 发布/公告"
+  },
+  {
+   "id": "cloudflare-rss",
+   "name": "Cloudflare Blog RSS",
+   "url": "https://blog.cloudflare.com/rss/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "rss",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "cloudflare",
+    "networking",
+    "security",
+    "engineering"
+   ],
+   "ka": [
+    "CN",
+    "SEC"
+   ],
+   "notes": "网络/安全工程实践"
+  },
+  {
+   "id": "deepmind-blog",
+   "name": "Google DeepMind Blog",
+   "url": "https://deepmind.google/discover/blog/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "deepmind",
+    "ai research",
+    "blog"
+   ],
+   "ka": [
+    "IS"
+   ],
+   "notes": "研究自述，非论文"
+  },
+  {
+   "id": "msr-blog",
+   "name": "Microsoft Research Blog",
+   "url": "https://www.microsoft.com/en-us/research/blog/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "microsoft research",
+    "blog"
+   ],
+   "ka": [
+    "AL",
+    "AR",
+    "CN",
+    "DM",
+    "FPL",
+    "HCI",
+    "IS",
+    "MSF",
+    "OS",
+    "PDC",
+    "SEC",
+    "SE"
+   ],
+   "notes": "研究自述，非论文"
+  },
+  {
+   "id": "anthropic-research",
+   "name": "Anthropic Research",
+   "url": "https://www.anthropic.com/research",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "blog",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "anthropic",
+    "ai safety",
+    "research"
+   ],
+   "ka": [
+    "IS",
+    "SEC"
+   ],
+   "notes": "研究自述；部分附论文链接"
+  },
+  {
+   "id": "chromestatus",
+   "name": "Chrome Platform Status API",
+   "url": "https://chromestatus.com/api/v0/features?q=webgpu",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "chrome platform status",
+    "web features",
+    "browser"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "Web 平台特性状态；无参返回全量约 1.36MB，建议带 q 过滤"
+  },
+  {
+   "id": "firefox-releases",
+   "name": "Firefox Release Notes",
+   "url": "https://www.mozilla.org/en-US/firefox/releases/",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "html",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "firefox",
+    "browser releases",
+    "features"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "浏览器版本特性"
+  },
+  {
+   "id": "node-changelog",
+   "name": "Node.js Changelog",
+   "url": "https://raw.githubusercontent.com/nodejs/node/main/CHANGELOG.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "node.js changelog",
+    "releases"
+   ],
+   "ka": [
+    "FPL"
+   ],
+   "notes": "版本变更"
+  },
+  {
+   "id": "dotnet-releases",
+   "name": ".NET Release Notes",
+   "url": "https://raw.githubusercontent.com/dotnet/core/main/release-notes/README.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "dotnet",
+    "c#",
+    "releases"
+   ],
+   "ka": [
+    "FPL",
+    "SPD"
+   ],
+   "notes": "版本变更"
+  },
+  {
+   "id": "k8s-changelog",
+   "name": "Kubernetes CHANGELOG",
+   "url": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/README.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "release-note",
+   "kind": "git-raw",
+   "content_access": "static",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "kubernetes changelog",
+    "releases"
+   ],
+   "ka": [
+    "PDC"
+   ],
+   "notes": "版本变更"
+  },
+  {
+   "id": "stackexchange-api",
+   "name": "Stack Exchange API",
+   "url": "https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow",
+   "layer": "depth",
+   "authority": "D",
+   "evidence": "community",
+   "kind": "api",
+   "content_access": "api",
+   "license_class": "cc-by-sa",
+   "cache_policy": "short-quote",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "stack overflow",
+    "q&a",
+    "troubleshooting"
+   ],
+   "ka": [
+    "SE",
+    "FPL",
+    "SPD"
+   ],
+   "notes": "排错线索；无 site 参数会 400；未认证约 300 次/天"
+  },
+  {
+   "id": "caniuse-data",
+   "name": "Can I Use data.json",
+   "url": "https://raw.githubusercontent.com/Fyrd/caniuse/main/data.json",
+   "layer": "depth",
+   "authority": "B",
+   "evidence": "index",
+   "kind": "dataset",
+   "content_access": "api",
+   "license_class": "site-terms",
+   "cache_policy": "metadata-only",
+   "attribution": "recommended",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "can i use",
+    "browser compatibility",
+    "web features"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "4.8MB；Web 特性兼容性数据"
+  },
+  {
+   "id": "mdn-bcd",
+   "name": "MDN browser-compat-data",
+   "url": "https://raw.githubusercontent.com/mdn/browser-compat-data/main/README.md",
+   "layer": "depth",
+   "authority": "A",
+   "evidence": "index",
+   "kind": "dataset",
+   "content_access": "api",
+   "license_class": "cc-by-sa",
+   "cache_policy": "short-quote",
+   "attribution": "required",
+   "refresh_days": 7,
+   "last_checked": "2026-11-06",
+   "keywords": [
+    "browser compatibility data",
+    "mdn"
+   ],
+   "ka": [
+    "SPD"
+   ],
+   "notes": "MDN 兼容数据仓库；JSON 在 data/ 下"
+  }
+ ]
+}
