@@ -93,11 +93,15 @@ Restart or reload the profile after installing. The plugin row appears under Set
 
 ## Development
 
+The registry source of truth is `data/cs-source-matrix.yaml` (119 sources with keywords, tiers and probe metadata); `data/sources.json` is generated from it.
+
 ```sh
-node test/check.mjs     # 26 checks: registry, tools, lossless JSON, latency budgets
+npm install            # dev dependency: yaml
+npm run build:data     # rebuild data/sources.json from the matrix
+node test/check.mjs    # 27 checks: registry, tools, lossless JSON, latency budgets
 ```
 
-The registry is generated from `cs-source-matrix.yaml` by `node tools/build-plugin-data.cjs`; the bundled file is `data/sources.json`.
+`tools/apply-keywords.cjs` re-applies `tools/source-keywords.json` to the matrix; `tools/make-icon.py` regenerates the icon PNGs.
 
 ## Data provenance and maintenance
 

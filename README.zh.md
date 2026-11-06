@@ -49,6 +49,18 @@ dsh plugin --profile web add github:uhygyuf/cs-source-reliable
 
 装完重启或重载配置后，在「设置 → 插件」里可以看到 **CS 信源可靠性**。
 
+## 数据与开发
+
+注册表的源头是 `data/cs-source-matrix.yaml`（119 个源，含关键词、分级与探测元数据），`data/sources.json` 由它生成。
+
+```sh
+npm install            # 开发依赖：yaml
+npm run build:data     # 重新生成 data/sources.json
+node test/check.mjs    # 27 项检查：注册表、工具、JSON 往返、延迟预算
+```
+
+`tools/apply-keywords.cjs` 把关键词表重新写回矩阵，`tools/make-icon.py` 重新生成图标。
+
 ## 边界
 
 - 工具查的是**人工维护的注册表**，不会自己抓网页、也不会自动判断某条结论真假；

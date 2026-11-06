@@ -30,7 +30,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node test/check.mjs"
+    "test": "node test/check.mjs",
+    "build:data": "node tools/build-data.cjs",
+    "apply:keywords": "node tools/apply-keywords.cjs"
   },
   "keywords": [
     "dsh",
@@ -61,5 +63,8 @@
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
+  },
+  "devDependencies": {
+    "yaml": "^2.9.1"
   }
 }

@@ -3,7 +3,7 @@
   "name": "CS source registry",
   "data_version": 1,
   "generated_at": "2026-11-06",
-  "source_matrix": "cs-source-matrix.yaml",
+  "source_matrix": "data/cs-source-matrix.yaml",
   "count": 119,
   "knowledge_areas": [
    "AL",
